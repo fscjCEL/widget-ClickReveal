@@ -1,15 +1,13 @@
-.DEP-clickButton{
+.clickButton{
 	text-align: right;
 
 }
-.DEP-clickButton:hover{
+.clickButton:hover{
 	background-color: #ededed;
 	color: #06e;
 
 }
-.theReveal{
-	transition: all 5s ease-in-out;
-}
+
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
@@ -338,6 +336,10 @@ div.row { border-bottom: 2px solid #999; overflow: auto; }
 }
 @media only screen and (max-width: 66.25em) {
 	.printHeaderHeader{font-size: 1.5em;}
+	.clickButton{
+		text-align: center;
+
+	}
 	
 }
 @media only screen and (max-width: 63em) {

@@ -1,0 +1,102 @@
+//===================== The JS function.
+//insert this function into the CEL-script.js file. There is an empty space waiting for it at the top of that js file.
+//As you add HTML structures don't forget to come back to the JS and uncomment the corresponding addEventListener lines.
+//the ID's used in the addEventListener lines must match the ones used in the HTML. Don't forget the preceding zero.
+
+// start copy here.
+
+function revealHandler(){
+	var theIDofTheElementICLicked,theSlicedNumber,getThisElement,theElementIWantTOReveal;
+	//grab the ID of the button i clicked
+	theIDofTheElementICLicked = this.id;
+	//use that ID to build the ID of the matching reveal element
+	theSlicedNumber = theIDofTheElementICLicked.substr(0,2);
+	getThisElement = theSlicedNumber+"b";
+	//grab that matching element
+	theElementIWantTOReveal = document.getElementById(getThisElement);
+	//if it's visible (show), if not then (hide).
+	if(theElementIWantTOReveal.className === "theReveal visuallyhidden"){
+		theElementIWantTOReveal.className = "theReveal";
+	}else{
+		theElementIWantTOReveal.className = "theReveal visuallyhidden";
+	}
+	//end if
+
+
+
+
+}//end reveal handler function
+//adding event listeners for the click and reveals.
+//document.getElementById("01a").addEventListener("click",revealHandler,false);
+//document.getElementById("02a").addEventListener("click",revealHandler,false);
+//document.getElementById("03a").addEventListener("click",revealHandler,false);
+//document.getElementById("04a").addEventListener("click",revealHandler,false);
+//document.getElementById("05a").addEventListener("click",revealHandler,false);
+//document.getElementById("06a").addEventListener("click",revealHandler,false);
+//document.getElementById("07a").addEventListener("click",revealHandler,false);
+//document.getElementById("08a").addEventListener("click",revealHandler,false);
+//document.getElementById("09a").addEventListener("click",revealHandler,false);
+//document.getElementById("10a").addEventListener("click",revealHandler,false);
+//document.getElementById("11a").addEventListener("click",revealHandler,false);
+//document.getElementById("12a").addEventListener("click",revealHandler,false);
+//document.getElementById("13a").addEventListener("click",revealHandler,false);
+//document.getElementById("14a").addEventListener("click",revealHandler,false);
+//document.getElementById("15a").addEventListener("click",revealHandler,false);
+//document.getElementById("16a").addEventListener("click",revealHandler,false);
+//document.getElementById("17a").addEventListener("click",revealHandler,false);
+//document.getElementById("18a").addEventListener("click",revealHandler,false);
+//document.getElementById("19a").addEventListener("click",revealHandler,false);
+
+
+// end copy here.
+
+//===================== The HTML Structure.
+ <!-- This is only an example structure. Notice the ID naming convention. The preceding numbers match, and are followed by an A and B component.
+ Click on the A component to Reveal the B component. For example clicking on 01a reveals 01b. both A and B can exist anywhere in the HTML structure. The following is just one way you can implement it.  -->
+
+<div class="CEL-1col-100">
+    <div class="CEL-2col-40-a">
+
+
+        <h3 id="01a" class="clickButton">Nature vs. Nurture </h3>
+
+    </div><!-- end 40-a-->
+    <div class="CEL-2col-60-b">
+        <div id="01b" class="theReveal visuallyhidden">
+            <!-- insert content here to be revealed -->
+            <hr>
+        </div><!-- end contentDIV -->
+
+    </div><!-- end 60-b-->
+    </div><!-- end 100 -->
+    <div class="CEL-1col-100">
+    <div class="CEL-2col-40-a">
+
+        <h3 id="02a" class="clickButton">Continuity vs. Discontinuity</h3>
+
+    </div><!-- end 40-a-->
+    <div class="CEL-2col-60-b">
+        <div id="02b" class="theReveal visuallyhidden">
+            <!-- insert content here to be revealed -->
+            <hr>
+        </div><!-- end contentDIV -->
+
+    </div><!-- end 60-b-->
+</div><!-- end 100 -->
+
+//===================== The CSS Styles.
+/* these styles align the (click) headers to the right at desktop widths, and provides an alternative hover state. */
+
+/* step 1 - copy these styles into the styles.css file right at the top of the file. */
+.clickButton{text-align: right;}
+.clickButton:hover{background-color: #ededed;color: #06e;}
+
+/* step 2 -  copy only the following line into the 66.5em media query. This ensures the click header looks properly centered at mobile widths.  */
+.clickButton{text-align: center;}
+
+/* this is an example of how the Completed media query should look  */
+@media only screen and (max-width: 66.25em) {
+	.printHeaderHeader{font-size: 1.5em;}
+	.clickButton{text-align: center;}
+}
+
