@@ -6,6 +6,6 @@ The widgetname.Zip file contains an example of the widget in action. Open index.
 
 The source.txt file contains the actual code you will need to copy/paste into your learning object, and the directions regarding where to do so.
 
-So read the comments carefully and you shouldn't have any problems implementing this. 
+So read the comments carefully and you shouldn't have any problems implementing this.
 
 
