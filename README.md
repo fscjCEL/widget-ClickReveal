@@ -2,10 +2,10 @@
 
 
 
-The widgetname.Zip file contains an example of the widget in action. Open index.html with a web browser and check out slide 1.
+- The example.zip file contains an example of the widget in action. Just open index.html with a web browser to check it out.
 
-The source.txt file contains the actual code you will need to copy/paste into your learning object, and the directions regarding where to do so.
+- The source.txt file contains the actual code you will need to copy/paste into your learning object, and the directions regarding where and how to do so.
 
-So read the comments carefully and you shouldn't have any problems implementing this.
+- All the direction you should need are located in the source file. So read them carefully.
 
 
