@@ -68,8 +68,8 @@ function revealHandler(){
         </div><!-- end contentDIV -->
 
     </div><!-- end 60-b-->
-    </div><!-- end 100 -->
-    <div class="CEL-1col-100">
+</div><!-- end 100 -->
+<div class="CEL-1col-100">
     <div class="CEL-2col-40-a">
 
         <h3 id="02a" class="clickButton">Continuity vs. Discontinuity</h3>
