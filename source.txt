@@ -91,7 +91,7 @@ function revealHandler(){
 .clickButton{text-align: right;}
 .clickButton:hover{background-color: #ededed;color: #06e;}
 
-/* step 2 -  copy only the following line into the 66.5em media query. This ensures the click header looks properly centered at mobile widths.  */
+/* step 2 -  copy only the following line into the 66.25em media query. This ensures the click header looks properly centered at mobile widths.  */
 .clickButton{text-align: center;}
 
 /* this is an example of how the Completed media query should look  */
