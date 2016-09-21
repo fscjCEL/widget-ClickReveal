@@ -1,86 +1,59 @@
  /* ======================================  STEP 1: some JS   ================================== */
- /* STEP ONE: Paste the following function right below the very first line in the main JS file which should read—" var methods = { ". */
+ /* STEP ONE: Paste the following js into the custom.js file.
  /* =================================================================================== */
+// This file should be used to insert any custom javascript into the page.
+var clickRevealMethod = {
+    revealHandler:function(){
+    var getThisElement,theElementIWantTOReveal;
+    getThisElement = this.getAttribute("data-reveal-ID");
+    //grab that matching element
+    theElementIWantTOReveal = document.getElementById(getThisElement);
+    //if it's visible (show), if not then (hide).
+    if(theElementIWantTOReveal.className === "theReveal is-invisible"){
+        theElementIWantTOReveal.className = "theReveal";
+    }else{
+        theElementIWantTOReveal.className = "theReveal is-invisible";
+    }
+    //end if
+}//end function
+};//end click reveal method
 
-revealHandler:function(){
-        var theIDofTheElementICLicked,theSlicedNumber,getThisElement,theElementIWantTOReveal;
-        //grab the ID of the button i clicked
-        theIDofTheElementICLicked = this.id;
-        //use that ID to build the ID of the matching reveal element
-        theSlicedNumber = theIDofTheElementICLicked.substr(0,2);
-        getThisElement = theSlicedNumber+"b";
-        alert(getThisElement);
-        //grab that matching element
-        theElementIWantTOReveal = document.getElementById(getThisElement);
-        //if it's visible (show), if not then (hide).
-        if(theElementIWantTOReveal.className === "theReveal is-invisible"){
-            theElementIWantTOReveal.className = "theReveal";
-        }else{
-            theElementIWantTOReveal.className = "theReveal is-invisible";
-        }
-        //end if
-    },//end function
+var clickRevealHeaders = document.getElementsByClassName("clickButton");
+for(var zz=0;zz<clickRevealHeaders.length;zz++){
+    clickRevealHeaders[zz].addEventListener("click",clickRevealMethod.revealHandler,"false");
+}//end for
 
-/* ======================================  STEP 2: more JS   ================================== */
-/* STEP TWO: Add event listener lines to the widgetListeners function. */
+
+
+/* ======================================  STEP 2: the HTML Structure   ================================== */
+/* STEP TWO: add the HTML structure to index.html by copy/pasting the following HTML. */
+/* NOTE: the id of the reveal must match the data-reveal-id attribute of the button revealing it */
 /* =================================================================================== */
-
-
-//uncomment an event listener per click & reveals.
-//document.getElementById("01a").addEventListener("click",revealHandler,false);
-//document.getElementById("02a").addEventListener("click",revealHandler,false);
-//document.getElementById("03a").addEventListener("click",revealHandler,false);
-//document.getElementById("04a").addEventListener("click",revealHandler,false);
-//document.getElementById("05a").addEventListener("click",revealHandler,false);
-//document.getElementById("06a").addEventListener("click",revealHandler,false);
-//document.getElementById("07a").addEventListener("click",revealHandler,false);
-//document.getElementById("08a").addEventListener("click",revealHandler,false);
-//document.getElementById("09a").addEventListener("click",revealHandler,false);
-//document.getElementById("10a").addEventListener("click",revealHandler,false);
-
-
-
-// end copy here.
-
-/* ======================================  STEP 3: the CSS   ================================== */
-/* STEP THREE: uncomment the following line in the style.scss file. */
-/* =================================================================================== */
-
-    //@import 'widget-clickReveal';
-
-/* ======================================  STEP 4: the HTML Structure   ================================== */
-/* STEP FOUR: add the HTML structure to index.html by copy/pasting the following HTML anywhere you need. */
-/* =================================================================================== */
-
-
- <!-- This is only an example structure. Notice the ID naming convention. The preceding numbers match, and are followed by an A and B component.
- Click on the A component to Reveal the B component. For example clicking on 01a reveals 01b. both A and B can exist anywhere in the HTML structure. The following is just one way you can implement it.  -->
-
 
 <!-- ======================= start Single clickReveal Object -->
-<div class="cel-row">
-    <div class="cel-40-a">
-        <h3 id="01a" class="clickButton">Nature vs. Nurture </h3>
-    </div><!-- end 40-a-->
-    <div class="cel-60-b">
-        <div id="01b" class="theReveal is-invisible">
-            <p>This is a test. </p>
-            <hr>
-        </div><!-- end 01b -->
-    </div><!-- end 60-b-->
-</div><!-- end row -->
-<!-- ======================= start Single clickReveal Object -->
-<div class="cel-row">
-    <div class="cel-40-a">
-        <h3 id="02a" class="clickButton">Continuity vs. Discontinuity</h3>
-    </div><!-- end 40-a-->
-    <div class="cel-60-b">
-        <div id="02b" class="theReveal is-invisible">
-            <p>This is another test. </p>
-            <hr>
-        </div><!-- end 02b -->
-    </div><!-- end 60-b-->
-</div><!-- end row -->
+        <div class="cel-row">
+            <div class="cel-40-a">
+                <h3 data-reveal-id="reveal-1" class="clickButton">Nature vs. Nurture </h3>
+            </div><!-- end 40-a-->
+            <div class="cel-60-b">
+                <div id="reveal-1" class="theReveal is-invisible">
+                    <p>This is a test. </p>
+                    <hr>
+                </div><!-- end 01b -->
+            </div><!-- end 60-b-->
+        </div><!-- end row -->
+        <!-- ======================= start Single clickReveal Object -->
+        <div class="cel-row">
+            <div class="cel-40-a">
+                <h3 data-reveal-id="reveal-2" class="clickButton">Continuity vs. Discontinuity</h3>
+            </div><!-- end 40-a-->
+            <div class="cel-60-b">
+                <div id="reveal-2" class="theReveal is-invisible">
+                    <p>This is another test. </p>
+                    <hr>
+                </div><!-- end 02b -->
+            </div><!-- end 60-b-->
+        </div><!-- end row -->
 
 
 
